@@ -9,7 +9,7 @@ pipeline {
 			dir('ansible') { sh 'ansible-playbook -- syntax-check playbook.yml '}
 			}
 		}
-		stage('2. Planificacion (Terraform plan) '){
+		stage('2. Planificacion (Terraform plan)'){
 			steps {
 				dir('terraform') {
 				sh 'terraform init'
