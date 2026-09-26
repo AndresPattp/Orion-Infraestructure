@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'Validando sintaxis de Terraform y Ansible...'
                 dir('terraform') { 
+                    sh 'terraform init'
                     sh 'terraform validate'
                 }
                 dir('ansible') { 
