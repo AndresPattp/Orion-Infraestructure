@@ -13,7 +13,7 @@ resource "local_file" "generar_inventario_ansible"{
 [produccion]
 localhost ansible_connection=local
 
-[produccion_vars]
+[produccion:vars]
 entorno=produccion_critica
 EOF
 
