@@ -1,0 +1,12 @@
+- name: Configuracion Inicial de Servidor
+  hosts: servidores_locales
+  tasks:
+    - name: 1. Crear directorio de despliegue
+      file:
+        path: /tmp/devops_app
+        state: directory
+
+    - name: 2. Crear archivo de estado
+      copy:
+        dest: /tmp/devops_app/estado.txt
+        content: "Servidor hackeado"
